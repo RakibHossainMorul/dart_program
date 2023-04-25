@@ -1,16 +1,12 @@
-void myFunction(int x, Function(int) callback) {
-  // Perform some processing
-  int result = x * 2;
+void printResult(int result) {
+  print('The result is: $result');
+}
 
-  // Call the callback function with the result
+void myFunction(int x, Function callback) {
+  int result = x * 2;
   callback(result);
 }
 
 void main() {
-  void printResult(int result) {
-    print('The result is: $result');
-  }
-
-  // Call myFunction with the callback function
   myFunction(5, printResult);
 }
