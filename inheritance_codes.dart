@@ -1,3 +1,6 @@
+/*
+
+
 class parentClass {
   late final int value1;
   late final double value2;
@@ -78,4 +81,35 @@ void main() {
   print("...................");
   childObject.display1();
   childObject.display2();
+}
+
+
+*/
+
+class a {
+  int age;
+  String name;
+  a({required this.age, required this.name});
+  void display1() {
+    print("This is from class a");
+    print("Age is $age");
+    print("Name is $name");
+  }
+}
+
+class b extends a {
+  b({required int ageB, required String nameB}) : super(age: ageB, name: nameB);
+
+  void display2() {
+    print("This is from class b");
+    print("Age is $age");
+    print("Name is $name");
+  }
+}
+
+void main() {
+  a aObject = a(age: 100, name: "James");
+  b bObject = b(ageB: 200, nameB: "Bond");
+  aObject.display1();
+  bObject.display2();
 }
