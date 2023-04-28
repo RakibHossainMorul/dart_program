@@ -1,12 +1,15 @@
-void printResult(int result) {
-  print('The result is: $result');
+void finalFunction(double c) {
+  double a = 5;
+  double b = 50;
+  var d = a + b + c;
+  print(d);
 }
 
-void myFunction(int x, Function callback) {
-  int result = x * 2;
-  callback(result);
+void callbackFunction(double e, Function recieveFunction) {
+  double f = e * 1;
+  recieveFunction(f);
 }
 
 void main() {
-  myFunction(5, printResult);
+  callbackFunction(10, finalFunction);
 }
