@@ -107,9 +107,32 @@ class b extends a {
   }
 }
 
+class c extends a {
+  c({required int ageC, required String nameC}) : super(age: ageC, name: nameC);
+  void display3() {
+    print("This is from class c");
+    print("Age is $age");
+    print("Name is $name");
+  }
+}
+
+class d extends c {
+  d({required int ageD, required String nameD})
+      : super(ageC: ageD, nameC: nameD);
+  void display4() {
+    print("This is from class d");
+    print("Age is $age");
+    print("Name is $name");
+  }
+}
+
 void main() {
   a aObject = a(age: 100, name: "James");
   b bObject = b(ageB: 200, nameB: "Bond");
+  c cObject = c(ageC: 300, nameC: "James Bond");
+  d dObject = d(ageD: 400, nameD: "James Bond 007");
   aObject.display1();
   bObject.display2();
+  cObject.display3();
+  dObject.display4();
 }
